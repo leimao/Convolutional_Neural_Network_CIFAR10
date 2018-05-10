@@ -10,10 +10,10 @@ This is an object-oriented implementation of convolutional neural network (CNN) 
 
 ## Dependencies
 
-Python 3.5
-Numpy 1.14
-TensorFlow 1.8
-Matplotlib 2.1.1 (for demo purpose)
+* Python 3.5
+* Numpy 1.14
+* TensorFlow 1.8
+* Matplotlib 2.1.1 (for demo purpose)
 
 
 ## Files
