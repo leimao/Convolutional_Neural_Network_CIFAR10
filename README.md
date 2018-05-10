@@ -29,7 +29,7 @@ This is an object-oriented implementation of convolutional neural network (CNN) 
 
 * User-friendly CNN API wrapped
 * Allows changing learning rate and dropout rate in real time
-* Highly automatic and no need for significant changes in order to work for other tasks
+* No need for significant changes to codes in order to work for other tasks
 
 ## Usage
 
