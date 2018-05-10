@@ -80,7 +80,8 @@ def train(learning_rate, learning_rate_decay, dropout_rate, mini_batch_size, epo
     model.save(directory = model_directory, filename = model_filename)
     print('Trained model saved successfully')
 
-    plot_curve(train_losses = train_loss_log, train_accuracies = train_accuracy_log, valid_accuracies = valid_accuracy_log)
+    plot_curve(train_losses = train_loss_log, train_accuracies = train_accuracy_log, valid_accuracies = valid_accuracy_log, \
+        filename = os.path.join(log_directory, 'training_curve.png'))
 
 
 def test(model_file):
