@@ -40,13 +40,13 @@ from cnn import CNN
 model = CNN(input_size = input_size, num_classes = num_classes, optimizer = optimizer)
 ...
 # Train on train set
-    for i, idx in enumerate(mini_batch_idx):
-        train_loss = model.train(data = x_train[idx], label = y_train_onehot[idx], learning_rate = learning_rate, dropout_rate = dropout_rate)
-        if i % 200 == 0:
-            train_prediction_onehot = model.test(data = x_train[idx])
-            train_prediction = np.argmax(train_prediction_onehot, axis = 1).reshape((-1,1))
-            train_accuracy = model_accuracy(label = y_train[idx], prediction = train_prediction)
-            print('Training Loss: %f, Training Accuracy: %f' % (train_loss, train_accuracy))
+for i, idx in enumerate(mini_batch_idx):
+    train_loss = model.train(data = x_train[idx], label = y_train_onehot[idx], learning_rate = learning_rate, dropout_rate = dropout_rate)
+    if i % 200 == 0:
+        train_prediction_onehot = model.test(data = x_train[idx])
+        train_prediction = np.argmax(train_prediction_onehot, axis = 1).reshape((-1,1))
+        train_accuracy = model_accuracy(label = y_train[idx], prediction = train_prediction)
+        print('Training Loss: %f, Training Accuracy: %f' % (train_loss, train_accuracy))
 ```
 
 ## Demo
