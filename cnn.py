@@ -15,7 +15,7 @@ class CNN(object):
         self.label = tf.placeholder(tf.float32, [None, self.num_classes], name = 'label')
         self.output = self.network_initializer()
         self.loss = self.loss_initializer()
-        self.optimizer = self.optimizer_initializer()
+        self.optimization = self.optimizer_initializer()
 
         self.saver = tf.train.Saver()
         self.sess = tf.Session()
@@ -145,7 +145,7 @@ class CNN(object):
 
     def train(self, data, label, learning_rate, dropout_rate):
 
-        _, train_loss = self.sess.run([self.optimizer, self.loss], 
+        _, train_loss = self.sess.run([self.optimization, self.loss], 
             feed_dict = {self.input: data, self.label: label, self.learning_rate: learning_rate, self.dropout_rate: dropout_rate})
         return train_loss
 
